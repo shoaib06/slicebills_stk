@@ -11,217 +11,254 @@
 </section>
 
 <section id="Quiz">
-    <div class="container type-debit first step-1">
-        <div class="row">
-            <h2 style="text-align: center; font: 25px; font-family: Poppins;">What's contributed to your financial difficulty in the past 12 months?</h2>
-            <p style="text-align: center;">[check all that apply]</p>
-            <span class="wpcf7-form-control-wrap" data-name="loan_type">
-                <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type" value="Job Loss Or Income Reduction" checked="checked"><span class="wpcf7-list-item-label">Job Loss Or Income Reduction</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Hardships Due To COVID-19"><span class="wpcf7-list-item-label">Hardships Due To COVID-19</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Medical Expenses & Bills"><span class="wpcf7-list-item-label">Medical Expenses & Bills</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Overwhelming Debts & Bills"><span class="wpcf7-list-item-label">Overwhelming Debts & Bills</span></label></span>
+    <form action="<?= base_url('front/add_lead') ?>" method="post">
 
-                    <span class="wpcf7-list-item last"><label><input type="checkbox" name="loan_type" value="Other">
-                            <span class="wpcf7-list-item-label">Other</span></label></span></span></span>
-           
 
-        </div>
+        <div class="container type-debit first step-1">
+            <div class="row">
+                <h2 style="text-align: center; font: 25px; font-family: Poppins;">What's contributed to your financial difficulty in the past 12 months?</h2>
+                <p style="text-align: center;">[check all that apply]</p>
+                <span class="wpcf7-form-control-wrap" data-name="loan_type">
+                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="contibute_factor[]" value="Job Loss Or Income Reduction" ><span class="wpcf7-list-item-label">Job Loss Or Income Reduction</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="contibute_factor[]" value="Hardships Due To COVID-19"><span class="wpcf7-list-item-label">Hardships Due To COVID-19</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="contibute_factor[]" value="Medical Expenses & Bills"><span class="wpcf7-list-item-label">Medical Expenses & Bills</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="contibute_factor[]" value="Overwhelming Debts & Bills"><span class="wpcf7-list-item-label">Overwhelming Debts & Bills</span></label></span>
 
-       
-        <a href="form-2.html">
-            <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div>
+                        <span class="wpcf7-list-item last"><label><input type="checkbox" name="contibute_factor[]" value="Other">
+                                <span class="wpcf7-list-item-label">Other</span></label></span></span></span>
 
-    <div class="container type-debit first step-2">
-        <div class="row">
-        <h2 style="text-align: center; font: 25px; font-family: Poppins;">Which of these debts are keeping you worried?</h2>
-    <p style="text-align: center;">[check all that apply]</p>
-            <span class="wpcf7-form-control-wrap" data-name="loan_type">
-                <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type" value="Credit Cards" checked="checked"><span class="wpcf7-list-item-label">Credit Cards</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Personal Loan Debt"><span class="wpcf7-list-item-label">Personal Loan Debt</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Tax Debt"><span class="wpcf7-list-item-label">Tax Debt</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Other Debts"><span class="wpcf7-list-item-label">Other Debts</span></label></span>
 
-                    <span class="wpcf7-list-item last"><label><input type="checkbox" name="loan_type" value="Medical Debt">
-                            <span class="wpcf7-list-item-label">Medical Debt</span></label></span></span></span>
-           
+            </div>
+            <input class="forsee" type="button" value="Next" data-nextstep="2">
 
         </div>
 
-      
-        <a href="form-2.html">
-            <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div>
+        <div class="container type-debit first step-2">
+            <div class="row">
+                <h2 style="text-align: center; font: 25px; font-family: Poppins;">Which of these debts are keeping you worried?</h2>
+                <p style="text-align: center;">[check all that apply]</p>
+                <span class="wpcf7-form-control-wrap" data-name="loan_type">
+                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type[]" value="Credit Cards" ><span class="wpcf7-list-item-label">Credit Cards</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type[]" value="Personal Loan Debt"><span class="wpcf7-list-item-label">Personal Loan Debt</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type[]" value="Tax Debt"><span class="wpcf7-list-item-label">Tax Debt</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type[]" value="Other Debts"><span class="wpcf7-list-item-label">Other Debts</span></label></span>
 
-    <div class="container type-debit first step-3">
-        <div class="row">
-        <h2 style="text-align: center; font: 25px; font-family: Poppins;">Do you have student loan debt?</h2>
-            <span class="wpcf7-form-control-wrap" data-name="loan_type">
-                <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type" value="No" checked="checked"><span class="wpcf7-list-item-label">No</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Yes"><span class="wpcf7-list-item-label">Yes</span></label></span>
+                        <span class="wpcf7-list-item last"><label><input type="checkbox" name="loan_type[]" value="Medical Debt">
+                                <span class="wpcf7-list-item-label">Medical Debt</span></label></span></span></span>
+
+
+            </div>
+
+
+
+            <input class="forsee" type="button" value="Next" data-nextstep="3">
+
+        </div>
+
+        <div class="container type-debit first step-3">
+            <div class="row">
+                <h2 style="text-align: center; font: 25px; font-family: Poppins;">Do you have student loan debt?</h2>
+                <span class="wpcf7-form-control-wrap" data-name="loan_type">
+                    <span class="wpcf7-form-control wpcf7-radio">
+                        <span class="wpcf7-list-item first">
+                            <label>
+                                <input type="radio" name="have_st_loan" value="No" >
+                                <span class="wpcf7-list-item-label">No</span>
+                            </label>
+                        </span>
+                        <span class="wpcf7-list-item">
+                            <label><input type="radio" name="have_st_loan" value="Yes">
+                                <span class="wpcf7-list-item-label">Yes</span>
+                            </label>
+                        </span>
+                    </span>  
+                </span>      
+            </div>
+
+
+
+            <input class="forsee" type="button" value="Next" data-nextstep="4">
+
+        </div>
+
+        <div class="container type-debit first step-4">
+            <div class="row">
+                <h2 style="text-align: center; font: 25px; font-family: Poppins;">Which type of student loan do you have?</h2>
+                <span class="wpcf7-form-control-wrap" data-name="loan_type">
+                    <span class="wpcf7-form-control wpcf7-radio">
+                        <span class="wpcf7-list-item first">
+                            <label>
+                                <input type="radio" name="st_loan_type" value="Private Student Loan" >
+                                <span class="wpcf7-list-item-label">Private Student Loan</span>
+                            </label>
+                        </span>
+                        <span class="wpcf7-list-item">
+                            <label><input type="radio" name="st_loan_type" value="Federal Student Loan">
+                                <span class="wpcf7-list-item-label">Federal Student Loan</span>
+                            </label>
+                        </span>
+                    </span>
+                </span>    
+
+
+            </div>
+
+
+
+            <input class="forsee" type="button" value="Next" data-nextstep="5">
+
+        </div>
+
+        <!-- <div class="container type-debit first step-5">
+            <div class="row">
+                <h2 style="text-align: center; font: 25px; font-family: Poppins;">Which type of student loan do you have?</h2>
+                <span class="wpcf7-form-control-wrap" data-name="loan_type">
+                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="st_loan_amount" value="$0-$10,000" ><span class="wpcf7-list-item-label">$0-$10,000</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="st_loan_amount" value="$10,000-$15,000"><span class="wpcf7-list-item-label">$10,000-$15,000</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="st_loan_amount" value="$15,000-$25,000"><span class="wpcf7-list-item-label">$15,000-$25,000</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="st_loan_amount" value="$25,000-$50,000"><span class="wpcf7-list-item-label">$25,000-$50,000</span></label></span>
+
+                        <span class="wpcf7-list-item last"><label><input type="checkbox" name="st_loan_amount" value="$50,000+">
+                                <span class="wpcf7-list-item-label">$50,000+</span></label></span></span>
+                </span>
+
+
+            </div>
+
+
+
+            <input class="forsee" type="button" value="Next" data-nextstep="6">
+
+        </div> -->
+
+        <div class="container type-debit first step-5">
+            <div class="row">
+                <h2 style="text-align: center; font: 25px; font-family: Poppins;">Apart from student loan, how much do you roughly owe in total?</h2>
+                <p style="text-align: center;">[No Need To Gather Bills - Estimate OK]</p>
+                <p class="ng-scope"><strong>Include: </strong>Credit Cards, Personal Loans, Payday Loans, Medical Bills, Taxes, and Other "Unsecured" Debts</p>
+                <p class="ng-scope"><strong>Don't Include:</strong>&nbsp;Student Loan, Mortgages, Auto Loans, HELOCs, or Other "Secured" Debts</p>
+              
+                <span class="wpcf7-form-control-wrap" data-name="loan_type">
+                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="radio" name="st_loan_amount" value="$0-$10,000" ><span class="wpcf7-list-item-label">$0-$10,000</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="radio" name="st_loan_amount" value="$10,000-$15,000"><span class="wpcf7-list-item-label">$10,000-$15,000</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="radio" name="st_loan_amount" value="$15,000-$25,000"><span class="wpcf7-list-item-label">$15,000-$25,000</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="radio" name="st_loan_amount" value="$25,000-$50,000"><span class="wpcf7-list-item-label">$25,000-$50,000</span></label></span>
+
+                        <span class="wpcf7-list-item last"><label><input type="radio" name="st_loan_amount" value="$50,000+">
+                                <span class="wpcf7-list-item-label">$50,000+</span></label></span></span>
+                </span>
+
+
+            </div>
+
+
+
+            <input class="forsee" type="button" value="Next" data-nextstep="7">
+
+        </div>
+        <div class="container type-debit first step-7">
+            <div class="row">
+                <h2 style="text-align: center; font: 25px; font-family: Poppins;">Are you falling behind on payments?</h2>
+                <span class="wpcf7-form-control-wrap" data-name="loan_type">
+                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="radio" name="falling_behind_payment" value="No" ><span class="wpcf7-list-item-label">No</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="radio" name="falling_behind_payment" value="Yes"><span class="wpcf7-list-item-label">Yes</span></label>
+                        </span>
+
+
+
+            </div>
+
+
+
+            <input class="forsee" type="button" value="Next" data-nextstep="8">
+
+        </div>
+        <div class="container type-debit first step-8">
+            <div class="row">
+                <h2 style="text-align: center; font: 25px; font-family: Poppins;">What's your current employment status?</h2>
+
+                <span class="wpcf7-form-control-wrap" data-name="loan_type">
+                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="radio" name="employment_status" value="Employed" ><span class="wpcf7-list-item-label">Employed</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="radio" name="employment_status" value="Self-Employed"><span class="wpcf7-list-item-label">Self-Employed</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="radio" name="employment_status" value="Student"><span class="wpcf7-list-item-label">Student</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="radio" name="employment_status" value="Retired"><span class="wpcf7-list-item-label">Retired</span></label></span>
+
+                        <span class="wpcf7-list-item last"><label><input type="radio" name="employment_status" value="Unemployed">
+                                <span class="wpcf7-list-item-label">Unemployed</span></label></span></span>
+                </span>
+
+
+            </div>
+
+
+
+            <input class="forsee" type="button" value="Next" data-nextstep="9">
+
+        </div>
+        <div class="container type-debit first step-9">
+            <div class="row">
+                <h2 style="text-align: center; font: 25px; font-family: Poppins;">
+                    What type of property do you live in?
+                </h2>
+                <span class="wpcf7-form-control-wrap" data-name="property_live_in">
+                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="radio" name="property_live_in" value="Own" ><span class="wpcf7-list-item-label">Own</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="radio" name="property_live_in" value="Rent"><span class="wpcf7-list-item-label">Rent</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="radio" name="property_live_in" value="Live with parents"><span class="wpcf7-list-item-label">Live with parents</span></label></span>
+                        <span class="wpcf7-list-item last"><label><input type="radio" name="property_live_in" value="Other">
+                                <span class="wpcf7-list-item-label">Other</span></label></span></span></span>
+
+
+            </div>
+
+
+
+            <input class="forsee" type="button" value="Next" data-nextstep="10">
 
         </div>
 
 
-        <a href="form-2.html">
-            <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div>
+        <div class="container type-debit first step-10">
+            <div class="row">
+                <h2 class="sub-heading">Enter your postal code</h2>
+                <span>This will help us determine your eligibility</span>
+                <input type="text" name="postal_code" id="">
 
-    <div class="container type-debit first step-4">
-        <div class="row">
-        <h2 style="text-align: center; font: 25px; font-family: Poppins;">Which type of student loan do you have?</h2>
-            <span class="wpcf7-form-control-wrap" data-name="loan_type">
-                <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type" value="$0-$10,000" checked="checked"><span class="wpcf7-list-item-label">$0-$10,000</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="$10,000-$15,000"><span class="wpcf7-list-item-label">$10,000-$15,000</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="$15,000-$25,000"><span class="wpcf7-list-item-label">$15,000-$25,000</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="$25,000-$50,000"><span class="wpcf7-list-item-label">$25,000-$50,000</span></label></span>
 
-                    <span class="wpcf7-list-item last"><label><input type="checkbox" name="loan_type" value="$50,000+">
-                            <span class="wpcf7-list-item-label">$50,000+</span></label></span></span></span>
+            </div>
 
+
+
+            <input class="forsee" type="button" value="Next" data-nextstep="11">
 
         </div>
 
+        <div class="container type-debit first step-11">
+            <div class="row">
+                <h2 style="text-align: center;" class="ng-scope"><b>Great News, Your Unsecured Debts Qualify For Relief&nbsp;In <span style="color:#3498db;">New York</span>!</b></h2>
+                <h4 style="text-align: center;" class="ng-scope"><b>NEXT STEP:</b> Enter Your Details Below To Get Your <span style="color:#3498db;"><strong>FREE Personalized Debt Savings Estimate</strong>!</span></h4>
+                <h6 class="ng-scope"><i>Your debt savings evaluation is free and will not affect your credit score. It's a safe and secure way to compare your options and savings on the total debt that you owe.</i></h6>
+                <span>This will help us determine your eligibility</span>
+                <label for="firstname">First Name</label>
+                <input type="text" name="first_name" id="">
 
-        <a href="form-2.html">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="last_name" id="">
+
+                <label for="email">Email</label>
+                <input type="text" name="email" id="">
+
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="">
+
+
+            </div>
+
+
+
             <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div>
-
-    <div class="container type-debit first step-5">
-        <div class="row">
-        <h2 style="text-align: center; font: 25px; font-family: Poppins;">Apart from student loan, how much do you roughly owe in total?</h2>
-    <p style="text-align: center;">[No Need To Gather Bills - Estimate OK]</p>
-    <p class="ng-scope"><strong>Include: </strong>Credit Cards, Personal Loans, Payday Loans, Medical Bills, Taxes, and Other "Unsecured" Debts</p>
-    <p class="ng-scope"><strong>Don't Include:</strong>&nbsp;Student Loan, Mortgages, Auto Loans, HELOCs, or Other "Secured" Debts</p>
-        <span class="wpcf7-form-control-wrap" data-name="loan_type">
-                <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type" value="No" checked="checked"><span class="wpcf7-list-item-label">No</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Yes"><span class="wpcf7-list-item-label">Yes</span></label></span>
-
 
         </div>
-
-
-        <a href="form-2.html">
-            <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div>
-    <div class="container type-debit first step-6">
-        <div class="row">
-        <h2 style="text-align: center; font: 25px; font-family: Poppins;">Are you falling behind on payments?</h2>
-
-        <span class="wpcf7-form-control-wrap" data-name="loan_type">
-                <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type" value="Employed" checked="checked"><span class="wpcf7-list-item-label">Employed</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Self-Employed"><span class="wpcf7-list-item-label">Self-Employed</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Student"><span class="wpcf7-list-item-label">Student</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Retired"><span class="wpcf7-list-item-label">Retired</span></label></span>
-
-                    <span class="wpcf7-list-item last"><label><input type="checkbox" name="loan_type" value="Unemployed">
-                            <span class="wpcf7-list-item-label">Unemployed</span></label></span></span></span>
-
-
-        </div>
-
-
-        <a href="form-2.html">
-            <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div>
-    <!-- <div class="container type-debit first step-7">
-        <div class="row">
-        <h2 style="text-align: center; font: 25px; font-family: Poppins;">Are you falling behind on payments?</h2>
-
-            <span class="wpcf7-form-control-wrap" data-name="loan_type">
-                <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type" value="Employed" checked="checked"><span class="wpcf7-list-item-label">Employed</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Hardships Due To COVID-19"><span class="wpcf7-list-item-label">Hardships Due To COVID-19</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Medical Expenses & Bills"><span class="wpcf7-list-item-label">Medical Expenses & Bills</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Overwhelming Debts & Bills"><span class="wpcf7-list-item-label">Overwhelming Debts & Bills</span></label></span>
-
-                    <span class="wpcf7-list-item last"><label><input type="checkbox" name="loan_type" value="Other">
-                            <span class="wpcf7-list-item-label">Other</span></label></span></span></span>
-
-
-        </div>
-
-
-        <a href="form-2.html">
-            <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div> -->
-    <div class="container type-debit first step-8">
-        <div class="row">
-        <h2 style="text-align: center; font: 25px; font-family: Poppins;">
-            What type of property do you live in?
-        </h2>    
-            <span class="wpcf7-form-control-wrap" data-name="loan_type">
-                <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type" value="Own" checked="checked"><span class="wpcf7-list-item-label">Own</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Rent"><span class="wpcf7-list-item-label">Rent</span></label></span>
-                    <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type" value="Live with parents"><span class="wpcf7-list-item-label">Live with parents</span></label></span>
-                    <span class="wpcf7-list-item last"><label><input type="checkbox" name="loan_type" value="Other">
-                    <span class="wpcf7-list-item-label">Other</span></label></span></span></span>
-
-
-        </div>
-
-
-        <a href="form-2.html">
-            <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div>
-
-    <!-- <div class="container type-debit first step-9">
-        <div class="row">
-        <h2 class="sub-heading">Enter your postal code</h2>
-            <span>This will help us determine your eligibility</span>
-            <input type="text" name="" id="">
-
-
-        </div>
-
-
-        <a href="form-2.html">
-            <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div> -->
-    <div class="container type-debit first step-10">
-        <div class="row">
-        <h2 class="sub-heading">Enter your postal code</h2>
-            <span>This will help us determine your eligibility</span>
-            <input type="text" name="" id="">
-
-
-        </div>
-
-
-        <a href="form-2.html">
-            <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div>
-
-    <div class="container type-debit first step-11">
-        <div class="row">
-        <h2 style="text-align: center;" class="ng-scope"><b>Great News, Your Unsecured Debts Qualify For Relief&nbsp;In <span style="color:#3498db;">New York</span>!</b></h2>
-        <h4 style="text-align: center;" class="ng-scope"><b>NEXT STEP:</b> Enter Your Details Below To Get Your <span style="color:#3498db;"><strong>FREE Personalized Debt Savings Estimate</strong>!</span></h4>
-        <h6 class="ng-scope"><i>Your debt savings evaluation is free and will not affect your credit score. It's a safe and secure way to compare your options and savings on the total debt that you owe.</i></h6>
-            <span>This will help us determine your eligibility</span>
-            <label for="firstname">First Name</label>
-            <input type="text" name="first_name" id="">
-
-            <label for="lastname">Last Name</label>
-            <input type="text" name="last_name" id="">
-
-
-        </div>
-
-
-        <a href="form-2.html">
-            <input class="forsee" type="submit" value="Submit">
-        </a>
-    </div>
-
+    </form>
 </section>
 
 

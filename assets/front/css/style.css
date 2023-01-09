@@ -244,3 +244,7 @@
     position: absolute;
     opacity: 0;
 }
+
+.type-debit{
+    display: none;
+}

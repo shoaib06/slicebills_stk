@@ -48,16 +48,16 @@ class Front extends CI_Controller
 
 	public function add_lead()
 	{
-		// echo "<pre>";
-		// print_r($this->input->post());
-		// echo "Hii";die;
+		echo "<pre>";
+		print_r($this->input->post());
+		echo "Hii";die;
 		$loan_type = strip_tags($this->input->post('student_loan_type'));
 		$first_name = strip_tags($this->input->post('first_name'));
-		$email = $this->input->post('email_address');
+		$email = $this->input->post('email');
 		$zip_code = strip_tags($this->input->post('zip_code'));
-		$debt_amount = strip_tags($this->input->post('student_loan_debt'));
+		$debt_amount = strip_tags($this->input->post('st_loan_amount'));
 		$last_name = strip_tags($this->input->post('last_name'));
-		$phone = strip_tags($this->input->post('phone_home'));
+		$phone = strip_tags($this->input->post('phone'));
 		$state = strip_tags($this->input->post('state'));
 
 		$ip_address = $this->input->ip_address();
@@ -68,8 +68,8 @@ class Front extends CI_Controller
 
 		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|xss_clean');
-		$this->form_validation->set_rules('phone_home', 'Phone', 'trim|required|xss_clean');
-		$this->form_validation->set_rules('email_address', 'Email', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('phone', 'Phone', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
 		if ($this->form_validation->run() == true) {
 
 			$data = array(
