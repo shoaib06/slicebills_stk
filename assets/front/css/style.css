@@ -1,0 +1,246 @@
+.nav-item a {
+    color: #000000 !important;
+    font-size: 21px;
+}
+
+.main-txt {
+    margin-top: 70px;
+}
+
+.main-txt h3 {
+    text-align: center;
+    color: black;
+}
+
+.main-txt p {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+
+}
+
+.numbers {
+    display: flex;
+}
+
+.numbers p {
+    background-color: #000;
+    padding: 21px;
+    width: 7%;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 24px;
+    font-weight: 700;
+}
+
+.number-img img {
+    display: block;
+    margin: 0 auto;
+}
+
+.number-img h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.number-img p {
+    text-align: center;
+}
+
+.cards img {
+    margin: 0 auto;
+    display: block;
+}
+
+.cards button {
+    margin: 0 auto;
+    display: block;
+    width: 67%;
+    margin-bottom: 19px;
+    background-color: #ff1616;
+    border: none !important;
+    color: #fff;
+    padding: 13px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.box-1 {
+    background-image: url('../images/photo-1.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.box-2 {
+    background-image: url('../images/pic-2.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 15px;
+}
+
+.box-3 {
+    background-image: url('../images/pic-3.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 15px;
+}
+
+.box-3 button {
+    margin: 0 auto;
+    display: block;
+    width: 67%;
+    margin-bottom: 19px;
+    background-color: #ff1616;
+    border: none !important;
+    color: #fff;
+    padding: 13px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.box-2 button {
+    margin: 0 auto;
+    display: block;
+    width: 67%;
+    margin-bottom: 19px;
+    background-color: #ff1616;
+    border: none !important;
+    color: #fff;
+    padding: 13px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.box-1 button {
+    margin: 0 auto;
+    display: block;
+    width: 67%;
+    margin-bottom: 19px;
+    background-color: #ff1616;
+    border: none !important;
+    color: #fff;
+    padding: 13px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.box-1 p {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.box-2 p {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.box-3 p {
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.form-btn button {
+    padding: 30px;
+    border-radius: 13px;
+    border: 2px solid #a5a5a5;
+    box-shadow: 0px 2px 0px 0px rgb(194 194 194);
+}
+
+@media screen and (max-width: 600px) {
+    .numbers {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box-1 {
+        background-image: url(../img/photo-1.jpg);
+        background-size: cover;
+        border-radius: 10px;
+        width: auto;
+    }
+
+    .box-2 {
+        background-image: url(../img/photo-1.jpg);
+        background-size: cover;
+        border-radius: 10px;
+        width: auto;
+        margin-left: 0;
+    }
+
+    .box-3 {
+        background-image: url(../img/photo-1.jpg);
+        background-size: cover;
+        border-radius: 10px;
+        width: auto;
+        margin-left: 0;
+    }
+}
+
+.forsee {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 42px;
+    background-color: #fc4136;
+    border: navajowhite;
+    padding: 10px;
+}
+
+.parent {
+    text-align: center;
+}
+
+.parent>ul {
+    display: inline-block;
+}
+
+.type-debit.step {
+    text-align: center;
+}
+
+
+.type-debit.first span.wpcf7-list-item {
+    width: 33.33%;
+    float: left;
+    margin: 0 0 46px !important;
+    position: relative;
+    padding: 0 15px;
+    display: block;
+}
+
+
+.type-debit span.wpcf7-list-item label {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.type-debit span.wpcf7-list-item-label {
+    display: inline-block;
+    background-color: #efefef;
+    color: #000;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.3s ease;
+    border: 2px solid #a5a5a5;
+    border-radius: 13px;
+}
+
+.type-debit span.wpcf7-list-item-label:hover {
+    background: #272727;
+}
+
+.type-debit input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}

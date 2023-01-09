@@ -1,0 +1,154 @@
+@import url("jquery-ui.css");
+/* simple css-based tooltip */
+.tooltip {
+	font-family:tahoma,Verdana, Geneva, sans-serif;
+	background-color:#000;
+	border: 2px solid #DDDDDD;
+	border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 6px #000000;
+	font-size: 11px;
+	padding: 8px 8px;
+	width:200px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	z-index:5001;
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 6px #000;
+	-webkit-box-shadow:0 0 6px #000;
+}
+.xverify_tooltip_underprocess {
+	font-family:tahoma,Verdana, Geneva, sans-serif;
+	background-color:#000;
+	border: 2px solid #DDDDDD;
+	border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 6px #000000;
+	font-size: 11px;
+	padding: 8px 8px;
+	width:200px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	z-index:5001;
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 6px #000;
+	-webkit-box-shadow:0 0 6px #000;
+}
+.tooltip_error {
+	font-family:tahoma,Verdana, Geneva, sans-serif;
+	background-color:#F00;
+	border: 2px solid #DDDDDD;
+	border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 6px #000000;
+	font-size: 11px;
+	padding: 8px 8px;
+	width:200px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	z-index:5001;
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 6px #000;
+	-webkit-box-shadow:0 0 6px #000;
+}
+
+.tooltip_warning {
+	font-family:tahoma,Verdana, Geneva, sans-serif;
+	background-color:#F60;
+	border: 2px solid #DDDDDD;
+	border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 6px #000000;
+	font-size: 11px;
+	padding: 8px 8px;
+	width:200px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	z-index:5001;
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 6px #000;
+	-webkit-box-shadow:0 0 6px #000;
+}
+.tooltip_error a{
+	color:#FFF;
+}
+.tooltip_warning a{
+	color:#FFF;
+}
+.ui-gray-dialog{
+	z-index:20000;
+}
+.ui-gray-dialog .ui-widget-content{padding:10px; overflow:hidden}
+.ui-gray-dialog .ui-dialog-content{padding:10px;overflow:hidden}
+.ui-gray-dialog .ui-dialog-titlebar{padding:0px;}
+.ui-gray-dialog .ui-widget-header{
+		background-color:#fff;
+	    color: #999;
+    	font-size: 10px;
+		padding:0px;
+		border:0;
+		font-weight: normal;
+}
+.tooltip_mobile {
+	font-family:tahoma,Verdana, Geneva, sans-serif;
+	background-color:#000;
+	border: 1px solid #DDDDDD;
+	font-size: 11px;
+	padding: 2px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	z-index:5001;
+}
+.xverify_tooltip_underprocess_mobile {
+	font-family:tahoma,Verdana, Geneva, sans-serif;
+	background-color:#000;
+	border: 1px solid #DDDDDD;
+	font-size: 11px;
+	padding: 2px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	z-index:5001;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+.tooltip_error_mobile {
+	font-family:tahoma,Verdana, Geneva, sans-serif;
+	background-color:#F00;
+	border: 1px solid #DDDDDD;
+	font-size: 11px;
+	padding: 2px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	z-index:5001;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+.tooltip_warning_mobile {
+	font-family:tahoma,Verdana, Geneva, sans-serif;
+	background-color:#F60;
+	border: 1px solid #DDDDDD;
+	font-size: 11px;
+	padding: 2px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	z-index:5001;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+.recaptcha_response_class_button{
+	border:0px;
+	cursor:pointer;
+	font-weight:bold;
+	letter-spacing: 1px;
+	background-color:#7c0000;
+	color:#fff;
+	font-size: 12px;
+	border-radius:4px;
+	padding:4px;
+	margin:4px;
+}
