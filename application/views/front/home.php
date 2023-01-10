@@ -1,3 +1,35 @@
+<style>
+    input[type="checkbox"] {
+    display: none;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 4.5rem;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 4.5rem;
+    font-size: 17px;
+}
+.type-debit span.wpcf7-list-item-label:hover {
+    background: #e0fafd;
+    
+}
+.type-debit span.wpcf7-list-item-label {
+    display: inline-block;
+    background-color: #efefef;
+    color: #000;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.3s ease;
+    border: 2px solid #a5a5a5;
+    border-radius: 13px;
+    border-bottom: 5px solid #a6a6a6;
+}
+</style>
+
 <section>
     <div class="container">
         <div class="row">
@@ -18,6 +50,7 @@
             <div class="row">
                 <h2 style="text-align: center; font: 25px; font-family: Poppins;">What's contributed to your financial difficulty in the past 12 months?</h2>
                 <p style="text-align: center;">[check all that apply]</p>
+
                 <span class="wpcf7-form-control-wrap" data-name="loan_type">
                     <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="contibute_factor[]" value="Job Loss Or Income Reduction" ><span class="wpcf7-list-item-label">Job Loss Or Income Reduction</span></label></span>
                         <span class="wpcf7-list-item"><label><input type="checkbox" name="contibute_factor[]" value="Hardships Due To COVID-19"><span class="wpcf7-list-item-label">Hardships Due To COVID-19</span></label></span>

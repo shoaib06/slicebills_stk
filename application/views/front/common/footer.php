@@ -10,10 +10,10 @@
         <p>We use cookies to give you the best experience. By using our website, you agree to our use of cookies in accordance with our cookie policy. Names and pictures associated with client testimonials are not real in order to protect the privacy of all clients. </p>
         <p>www.deptsupportnational.com is owned by Digital Hopr Inc. Registered Address: <?= $address; ?></p>
       </div>
-      <ul style="text-align: center;">
-        <li style="list-style: none;"><a href="<?= base_url('front/privacy') ?>">Privacy Policy</li>
-        <li style="list-style: none;"><a href="<?= base_url('front/terms') ?>">Terms & Conditions</li>
-        <li style="list-style: none;"><a href="<?= base_url('front/service_providers') ?>">Service Providers</li>
+      <ul style="text-align: center;margin: 0 auto;align-content: flex-end;justify-content: center; display: flex;">
+        <li style="list-style: none;"><a style="padding-left: 10px; padding-left: 10px;color: #000;" href="<?= base_url('front/privacy') ?>">Privacy Policy</li>
+        <li style="list-style: none;"><a style="padding-left: 10px; padding-left: 10px;color: #000;" href="<?= base_url('front/terms') ?>">Terms & Conditions</li>
+        <li style="list-style: none;"><a style="padding-left: 10px; padding-left: 10px;color: #000;" href="<?= base_url('front/service_providers') ?>">Service Providers</li>
       </ul>
       <div class="col-md-2"></div>
     </div>

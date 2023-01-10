@@ -185,13 +185,14 @@
 }
 
 .forsee {
-    text-align: center;
+  text-align: center;
     display: block;
     margin: 0 auto;
     margin-top: 42px;
-    background-color: #fc4136;
-    border: navajowhite;
-    padding: 10px;
+    background-color: #f56058;
+    padding: 10px 30px 10px 30px;
+    border: #f56058;
+    color: #fff;
 }
 
 .parent {
@@ -247,4 +248,7 @@
 
 .type-debit{
     display: none;
+}
+.wpcf7-form-control-wrap {
+    margin-top: 70px !important;
 }
