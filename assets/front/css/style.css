@@ -182,6 +182,15 @@
         width: auto;
         margin-left: 0;
     }
+
+    .wpcf7-list-item {
+    width: 100% !important;
+    float: left;
+    margin: 0 0 46px !important;
+    position: relative;
+    padding: 0 15px;
+    display: block;
+}
 }
 
 .forsee {
