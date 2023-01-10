@@ -374,13 +374,13 @@
                 </a>
             </div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
-                <img src="<?= base_url('assets/front/images') ?>/icon-1.avif">
+                <img src="<?= base_url('assets/front/images') ?>/icon-2.avif">
                 <a href="<?= base_url('/#Quiz') ?>">
                     <button>Payday</button>
                 </a>
             </div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
-                <img src="<?= base_url('assets/front/images') ?>/icon-1.avif">
+                <img src="<?= base_url('assets/front/images') ?>/icon-3.avif">
                 <a href="<?= base_url('/#Quiz') ?>">
                     <button>Personal Loans</button>
                 </a>
@@ -388,20 +388,20 @@
         </div>
         <div class="row cards" style="width: 70%; display: flex;margin: 0 auto; margin-top: 30px">
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
-                <img src="<?= base_url('assets/front/images') ?>/icon-1.avif" style="display: block;">
+                <img src="<?= base_url('assets/front/images') ?>/icon-4.avif" style="display: block;">
                 <a href="<?= base_url('/#Quiz') ?>">
                     <button>Student Debt</button>
                 </a>
             </div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
-                <img src="<?= base_url('assets/front/images') ?>/icon-1.avif">
+                <img src="<?= base_url('assets/front/images') ?>/icon-5.avif">
                 <a href="<?= base_url('/#Quiz') ?>">
 
                     <button>Income Tax</button>
                 </a>
             </div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
-                <img src="<?= base_url('assets/front/images') ?>/icon-1.avif">
+                <img src="<?= base_url('assets/front/images') ?>/icon-6.avif">
                 <a href="<?= base_url('/#Quiz') ?>">
 
                     <button>Medical Bills</button>
@@ -411,14 +411,14 @@
         <div class="row cards" style="width: 70%;display: flex;margin: 0 auto; margin-top:30px;">
             <div class="col-md-2"></div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
-                <img src="<?= base_url('assets/front/images') ?>/icon-1.avif" style="display: block;">
+                <img src="<?= base_url('assets/front/images') ?>/icon-7.avif" style="display: block;">
                 <a href="<?= base_url('/#Quiz') ?>">
 
                     <button>Household bills</button>
                 </a>
             </div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
-                <img src="<?= base_url('assets/front/images') ?>/icon-1.avif">
+                <img src="<?= base_url('assets/front/images') ?>/icon-8.avif">
                 <a href="<?= base_url('/#Quiz') ?>">
 
                     <button>Other Unsecured Debt</button>
