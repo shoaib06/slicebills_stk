@@ -48,13 +48,16 @@ class Front extends CI_Controller
 
 	public function add_lead()
 	{
-		echo "<pre>";
-		print_r($this->input->post());
-		echo "Hii";die;
-		$loan_type = strip_tags($this->input->post('student_loan_type'));
+		// echo "<pre>";
+		// print_r($this->input->post());
+		// echo "Hii";die;
+		$refer =  $this->agent->referrer();
+		$data = $this->input->post();
+
+		$loan_type = strip_tags($this->input->post('st_loan_type'));
 		$first_name = strip_tags($this->input->post('first_name'));
 		$email = $this->input->post('email');
-		$zip_code = strip_tags($this->input->post('zip_code'));
+		$zip_code = strip_tags($this->input->post('postal_code'));
 		$debt_amount = strip_tags($this->input->post('st_loan_amount'));
 		$last_name = strip_tags($this->input->post('last_name'));
 		$phone = strip_tags($this->input->post('phone'));
@@ -72,43 +75,47 @@ class Front extends CI_Controller
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
 		if ($this->form_validation->run() == true) {
 
-			$data = array(
-				'website_id' => WEBSITE_ID,
-				'state' => $state,
-				'loan_type' => $loan_type,
-				'zip_code' => $zip_code,
-				'first_name' => $first_name,
-				'last_name' => $last_name,
-				'email' => $email,
-				'phone' => $phone,
-				'debt_amount' => $debt_amount,
-				'ip_address' => $ip_address,
-				'certUrl' => $certUrl,
-				'pingUrl' => $pingUrl,
-				'timestamp' => time(),
-			);
+			
+			$data['certUrl'] =$certUrl;
+			$data['pingUrl'] =$pingUrl;
+			
+			unset($data['xxTrustedFormToken']);
+			unset($data['xxTrustedFormCertUrl']);
+			unset($data['xxTrustedFormPingUrl']);
+			unset($data['st_loan_amount']);
+			unset($data['postal_code']);
 
+			$data['contibute_factor'] = implode(',',$data['contibute_factor']);
+			$data['loan_type'] = implode(',',$data['loan_type']);
+			$data['debt_amount'] = $debt_amount;
+			$data['zip_code'] = $zip_code;
+			$data['ip_address'] = $ip_address;
+			$data['timestamp'] = time();
+
+			// echo "<pre>";
+			// print_r($data);die;
 
 			$insert_data = $this->common_model->InsertTableData(LEADS_TABLE, $data);
 			if ($insert_data) {
-				$result['status'] = "success";
-				$result['lead_id'] = $insert_data;
-				$result['html'] = "Successfully Added.";
-				$result['type'] = "alert";
-				echo json_encode($result);
-				die();
+				$this->session->set_flashdata('flash_message', 'Thanks! We will get back to you soon.');
+                $this->session->set_flashdata('class', 'success');
+                redirect('front');
+				// $result['status'] = "success";
+				// $result['lead_id'] = $insert_data;
+				// $result['html'] = "Successfully Added.";
+				// $result['type'] = "alert";
+				// echo json_encode($result);
+				// die();
 			} else {
-				$result['status'] = "error";
-				$result['html'] = "Something went wrong please try again.";
-				$result['type'] = "alert";
-				echo json_encode($result);
-				die();
+				$this->session->set_flashdata('flash_message', 'Something went wrong.Please try again.');
+                $this->session->set_flashdata('class', 'danger');
+				redirect($refer);
 			}
 		}
-		$json_data['status'] = "error";
-		$json_data['msg'] = validation_errors();
-		echo json_encode($json_data);
-		die();
+		$this->form_validation->set_error_delimiters('', '');
+		$this->session->set_flashdata('flash_message', validation_errors());
+		$this->session->set_flashdata('class', 'danger');
+		redirect($refer);
 	}
 
 	public function service_providers()

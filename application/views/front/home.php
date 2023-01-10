@@ -11,8 +11,8 @@
 </section>
 
 <section id="Quiz">
-    <form action="<?= base_url('front/add_lead') ?>" method="post">
-
+    <form action="<?= base_url('front/add_lead') ?>" method="post" id="quizform">
+        <?php $this->common_model->showAlertMsg(); ?>
 
         <div class="container type-debit first step-1">
             <div class="row">
@@ -26,7 +26,7 @@
 
                         <span class="wpcf7-list-item last"><label><input type="checkbox" name="contibute_factor[]" value="Other">
                                 <span class="wpcf7-list-item-label">Other</span></label></span></span></span>
-
+                        <div class="error-step-1"></div> 
 
             </div>
             <input class="forsee" type="button" value="Next" data-nextstep="2">
@@ -46,6 +46,7 @@
                         <span class="wpcf7-list-item last"><label><input type="checkbox" name="loan_type[]" value="Medical Debt">
                                 <span class="wpcf7-list-item-label">Medical Debt</span></label></span></span></span>
 
+                    <div class="error-step-2"></div> 
 
             </div>
 
@@ -77,7 +78,7 @@
 
 
 
-            <input class="forsee" type="button" value="Next" data-nextstep="4">
+            <input class="forsee"  type="button" value="Next" data-nextstep="4" style="display: none;">
 
         </div>
 
@@ -105,7 +106,7 @@
 
 
 
-            <input class="forsee" type="button" value="Next" data-nextstep="5">
+            <input class="forsee" type="button" value="Next" data-nextstep="5" style="display: none;">
 
         </div>
 
@@ -153,7 +154,7 @@
 
 
 
-            <input class="forsee" type="button" value="Next" data-nextstep="7">
+            <input class="forsee" type="button" value="Next" data-nextstep="7" style="display: none;">
 
         </div>
         <div class="container type-debit first step-7">
@@ -170,7 +171,7 @@
 
 
 
-            <input class="forsee" type="button" value="Next" data-nextstep="8">
+            <input class="forsee" type="button" value="Next" data-nextstep="8" style="display: none;">
 
         </div>
         <div class="container type-debit first step-8">
@@ -192,7 +193,7 @@
 
 
 
-            <input class="forsee" type="button" value="Next" data-nextstep="9">
+            <input class="forsee" type="button" value="Next" data-nextstep="9" style="display: none;">
 
         </div>
         <div class="container type-debit first step-9">
@@ -212,7 +213,7 @@
 
 
 
-            <input class="forsee" type="button" value="Next" data-nextstep="10">
+            <input class="forsee" type="button" value="Next" data-nextstep="10" style="display: none;">
 
         </div>
 
@@ -226,9 +227,9 @@
 
             </div>
 
+            <div class="error-step-10"></div>
 
-
-            <input class="forsee" type="button" value="Next" data-nextstep="11">
+            <input class="forsee" type="button" value="Next" data-nextstep="11" >
 
         </div>
 
@@ -239,16 +240,16 @@
                 <h6 class="ng-scope"><i>Your debt savings evaluation is free and will not affect your credit score. It's a safe and secure way to compare your options and savings on the total debt that you owe.</i></h6>
                 <span>This will help us determine your eligibility</span>
                 <label for="firstname">First Name</label>
-                <input type="text" name="first_name" id="">
+                <input type="text" name="first_name" id="" required>
 
                 <label for="lastname">Last Name</label>
-                <input type="text" name="last_name" id="">
+                <input type="text" name="last_name" id="" required>
 
                 <label for="email">Email</label>
-                <input type="text" name="email" id="">
+                <input type="email" name="email" id="" required>
 
                 <label for="phone">Phone</label>
-                <input type="text" name="phone" id="">
+                <input type="text" name="phone" id="" required>
 
 
             </div>

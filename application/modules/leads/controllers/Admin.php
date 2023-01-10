@@ -133,16 +133,19 @@ class Admin extends CI_Controller
 			$new_data['last_name'] = $data['last_name'];
 			$new_data['email'] = $data['email'];
 			$new_data['phone'] = $data['phone'];
-			$new_data['dob'] = date('m-d-Y H:i A',strtotime($data['dob']));
-			$new_data['gender'] = $data['gender'];
-			$new_data['state'] = $data['state'];
-			$new_data['city'] = $data['city'];
+			$new_data['debt_amount'] = $data['debt_amount'];
+			$new_data['employment_status'] = $data['employment_status'];
+			$new_data['contibute_factor'] = $data['contibute_factor'];
+			$new_data['loan_type'] = $data['loan_type'];
+			$new_data['have_st_loan'] = $data['have_st_loan'];
+			$new_data['st_loan_type'] = $data['st_loan_type'];
+			$new_data['falling_behind_payment'] = $data['falling_behind_payment'];
+			$new_data['property_live_in'] = $data['property_live_in'];
 			$new_data['zip_code'] = $data['zip_code'];
 		    // $new_data['date_time'] = date('m-d-Y H:i A',strtotime($data['date_time']));
 			$new_data['certUrl'] = $data['certUrl'];
 			$new_data['pingUrl'] = $data['pingUrl'];
 			$new_data['ip_address'] = $data['ip_address'];
-			$new_data['name'] = $data['name'];
 			$new_data['timestamp'] = date('d-M-Y',$data['timestamp']);
 			fputcsv($file,$new_data); 
 	   }

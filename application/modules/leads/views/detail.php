@@ -33,16 +33,19 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone</th>
-                                        <th>DOB</th>
-                                        <th>Gender</th>
-                                        <th>State</th>
-                                        <th>City</th>
-                                        <th>zip_code</th>
-                                        <!-- <th>Appointment</th> -->
+                                        <th>Debt Amount</th>
+                                        <th>Employment_status</th>
+                                        <th>Financial Difficulty</th>
+                                        <th>Loan type</th>
+                                        <th>Have Student Loan?</th>
+                                        <th>Student Loan Type</th>
+                                        <th>Falling behind payment</th>
+                                        <th>Property Live In</th>
+                                        <th>Postal Code</th>
                                         <th>Certificate </th>
                                         <th>Ping Url</th>
                                         <th>IP Address</th>
-                                        <th>Submitted by</th>
+                                        <!-- <th>Submitted by</th> -->
                                         <th>Submitted at</th>
                                     </tr>
                                 </thead>
@@ -53,14 +56,18 @@
                                                 <td><?php echo ucfirst($result['first_name'] . ' ' . $result['last_name']) ?></td>
                                                 <td><?php echo $result['email'] ?></td>
                                                 <td><?php echo $result['phone'] ?></td>
-                                                <td><?php echo $result['dob'] ?></td>
-                                                <td><?php echo $result['gender'] ?></td>
+                                                <td><?php echo $result['debt_amount'] ?></td>
+                                                <td><?php echo $result['employment_status'] ?></td>
 
-                                                <td><?php echo $result['state'] ?></td>
-                                                <td><?php echo $result['city'] ?></td>
-                                                 <td><?php echo $result['zip_code'] ?></td>
+                                                <td><?php echo $result['contibute_factor'] ?></td>
+                                                <td><?php echo $result['loan_type'] ?></td>
+                                                <td><?php echo $result['have_st_loan'] ?></td>
+                                                <td><?php echo $result['st_loan_type']; ?></td>
+                                                <td><?php echo $result['falling_behind_payment']; ?></td>
+                                                <td><?php echo $result['property_live_in']; ?></td>
+                                                
+                                                <td><?php echo $result['zip_code'] ?></td>
 
-                                                <!-- <td><?php echo date('m-d-Y H:i A',strtotime($result['date_time'])) ?></td> -->
 
                                                 <td>
                                                 <?php if($result['certUrl']){?>    
@@ -79,24 +86,10 @@
 
 
                                                 <td><?php echo $result['ip_address'] ?></td>
-                                                <td><?php echo $result['name'] ?></td>
 
                                                 <td><?php echo date('d-M-Y', $result['timestamp']) ?></td>
 
-                                                <!--<td>
-												<div class="td-actions">
-													<button class="btn btn-success edit nw_clicks" rel="tooltip" data-toggle="tooltip" pid="<?php echo $result['id'] ?>" data-placement="top" title="" data-original-title="Edit">
-														<a href="<?php echo base_url($module . '/admin/edit/' . $result['id']); ?>" ><i class="material-icons">edit</i></a>
-													</button>
-													
-													
-													
-													<button class="btn btn-danger" data-toggle="tooltip" rel="tooltip" pid="<?php echo $result['id'] ?>" data-placement="top" title="" data-original-title="Delete">
-														<i class="material-icons">trash</i></i>
-													</button>
-													
-												</div>
-											</td>-->
+                                               
                                             </tr>
                                         <?php endforeach; ?>
                                     <?php else : ?>
