@@ -1,3 +1,15 @@
+
+<style>
+    .te-scope{
+        position: absolute;
+    top: -43px;
+    bottom: 0px;
+    /* left: 10px; */
+    right: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    }
+</style>
 <div class="main-page page-section funnel-entry-page">
     <div class=" cvt-1568371626-box d0 d1 m0 m1 " id="boxe2594a01-86d2-f83d-14f4-fce02f9e817b">
         <div class=" cvt-1568371626-element-body lazy-bg c0 c1 c2 c3 lazy-bg no-lazy-bg-mobile "></div>
@@ -15,8 +27,7 @@
     <div class=" cvt-1568371626-box d9 d10 m7 m8 " id="box65e91278-3437-4892-1ae6-2c9680094d5d">
         <div class=" cvt-1568371626-element-body lazy-bg no-lazy-bg-mobile c0 c1 c4 c8 text-legacy ">
             <div class="te-scope-desktop" style="min-height:20px">
-                <h2 class="b66ddc83f-99eb-9a85-4d4e-8764cf59c437" style="margin-top:0px"><span style="line-height:44px">Get In
-                        Touch</span></h2>
+                <h2 class="b66ddc83f-99eb-9a85-4d4e-8764cf59c437" style="margin-top:0px"><span style="line-height:44px;text-align: left; font-size: 40px;">Get In Touch</span></h2>
             </div>
             <div class="te-scope-mobile" style="min-height:20px">
                 <h2 class="b66ddc83f-99eb-9a85-4d4e-8764cf59c437" style="margin-top:0px"><span style="line-height:50px;font-size:45px">Get In Touch</span></h2>
@@ -26,8 +37,7 @@
     <div class=" cvt-1568371626-box d6 d9 d11 m7 m9 " id="box0a2db2c8-7e30-3d99-1daa-68d35459b46f">
         <div class=" cvt-1568371626-element-body lazy-bg no-lazy-bg-mobile c0 c1 c4 c8 text-legacy ">
             <div class="te-scope-desktop" style="min-height:20px">
-                <p class="ba72977d4-5091-7f57-14ac-43c668b82659" style="margin-top:0px"><span style="line-height:26px;color:rgb(17, 17, 17)">If you’d like to book a consultation or if you’ve just got
-                        a question, fill out the form below!</span></p>
+                <p class="ba72977d4-5091-7f57-14ac-43c668b82659" style=""><span style="line-height:26px;color:rgb(17, 17, 17)">If you’d like to book a consultation or if you’ve just got a question, fill out the form below!</span></p>
             </div>
             <div class="te-scope-mobile" style="min-height:20px">
                 <p class="ba72977d4-5091-7f57-14ac-43c668b82659" style="margin-top:0px"><span style="line-height:29px;font-size:18px;color:rgb(17, 17, 17)">If you’d like to book a consultation or if
