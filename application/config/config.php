@@ -23,11 +23,9 @@ date_default_timezone_set("Asia/Kolkata");
 | a PHP script and you can easily do that on your own.
 |
 */
-define('APP_URL', ($_SERVER['SERVER_PORT'] == 443 ? 'https' : 'http') . "://{$_SERVER['SERVER_NAME']}".str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME'])); 
+define('APP_URL', ($_SERVER['SERVER_PORT'] == 443 ? 'https' : 'http') . "://{$_SERVER['HTTP_HOST']}".str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME'])); 
 
 $config['base_url'] = APP_URL;
-
-
 /*
 |--------------------------------------------------------------------------
 | Index File
