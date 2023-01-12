@@ -15,6 +15,11 @@
     background: #e0fafd;
     
 }
+.type-debit span.wpcf7-list-item-label.active {
+    background: #e0fafd;
+    
+}
+
 .type-debit span.wpcf7-list-item-label {
     display: inline-block;
     background-color: #efefef;
@@ -28,6 +33,8 @@
     border-radius: 13px;
     border-bottom: 5px solid #a6a6a6;
 }
+
+
 </style>
 
 <section>
@@ -42,6 +49,7 @@
 
 </section>
 
+
 <section id="Quiz">
     <form action="<?= base_url('front/add_lead') ?>" method="post" id="quizform">
         <?php $this->common_model->showAlertMsg(); ?>
@@ -52,13 +60,13 @@
                 <p style="text-align: center;">[check all that apply]</p>
 
                 <span class="wpcf7-form-control-wrap" data-name="loan_type">
-                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="contibute_factor[]" value="Job Loss Or Income Reduction" ><span class="wpcf7-list-item-label">Job Loss Or Income Reduction</span></label></span>
-                        <span class="wpcf7-list-item"><label><input type="checkbox" name="contibute_factor[]" value="Hardships Due To COVID-19"><span class="wpcf7-list-item-label">Hardships Due To COVID-19</span></label></span>
-                        <span class="wpcf7-list-item"><label><input type="checkbox" name="contibute_factor[]" value="Medical Expenses & Bills"><span class="wpcf7-list-item-label">Medical Expenses & Bills</span></label></span>
-                        <span class="wpcf7-list-item"><label><input type="checkbox" name="contibute_factor[]" value="Overwhelming Debts & Bills"><span class="wpcf7-list-item-label">Overwhelming Debts & Bills</span></label></span>
+                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="contibute_factor[]" value="Job Loss Or Income Reduction" ><span class="wpcf7-list-item-label"  onclick="this.classList.toggle('active');">Job Loss Or Income Reduction</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="contibute_factor[]" value="Hardships Due To COVID-19"><span class="wpcf7-list-item-label" onclick="this.classList.toggle('active');">Hardships Due To COVID-19</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="contibute_factor[]" value="Medical Expenses & Bills"><span class="wpcf7-list-item-label"  onclick="this.classList.toggle('active');">Medical Expenses & Bills</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="contibute_factor[]" value="Overwhelming Debts & Bills"><span class="wpcf7-list-item-label"  onclick="this.classList.toggle('active');">Overwhelming Debts & Bills</span></label></span>
 
                         <span class="wpcf7-list-item last"><label><input type="checkbox" name="contibute_factor[]" value="Other">
-                                <span class="wpcf7-list-item-label">Other</span></label></span></span></span>
+                                <span class="wpcf7-list-item-label"  onclick="this.classList.toggle('active');">Other</span></label></span></span></span>
                         <div class="error-step-1"></div> 
 
             </div>
@@ -71,13 +79,13 @@
                 <h2 style="text-align: center; font: 25px; font-family: Poppins;">Which of these debts are keeping you worried?</h2>
                 <p style="text-align: center;">[check all that apply]</p>
                 <span class="wpcf7-form-control-wrap" data-name="loan_type">
-                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type[]" value="Credit Cards" ><span class="wpcf7-list-item-label">Credit Cards</span></label></span>
-                        <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type[]" value="Personal Loan Debt"><span class="wpcf7-list-item-label">Personal Loan Debt</span></label></span>
-                        <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type[]" value="Tax Debt"><span class="wpcf7-list-item-label">Tax Debt</span></label></span>
-                        <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type[]" value="Other Debts"><span class="wpcf7-list-item-label">Other Debts</span></label></span>
+                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="checkbox" name="loan_type[]" value="Credit Cards" ><span class="wpcf7-list-item-label"  onclick="this.classList.toggle('active');">Credit Cards</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type[]" value="Personal Loan Debt"><span class="wpcf7-list-item-label"  onclick="this.classList.toggle('active');">Personal Loan Debt</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type[]" value="Tax Debt"><span class="wpcf7-list-item-label"  onclick="this.classList.toggle('active');">Tax Debt</span></label></span>
+                        <span class="wpcf7-list-item"><label><input type="checkbox" name="loan_type[]" value="Other Debts"><span class="wpcf7-list-item-label"  onclick="this.classList.toggle('active');">Other Debts</span></label></span>
 
                         <span class="wpcf7-list-item last"><label><input type="checkbox" name="loan_type[]" value="Medical Debt">
-                                <span class="wpcf7-list-item-label">Medical Debt</span></label></span></span></span>
+                                <span class="wpcf7-list-item-label"  onclick="this.classList.toggle('active');">Medical Debt</span></label></span></span></span>
 
                     <div class="error-step-2"></div> 
 
@@ -369,19 +377,19 @@
     margin: 0 auto; margin-top:40px;">
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
                 <img src="<?= base_url('assets/front/images') ?>/icon-1.avif" style="display: block;">
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
                     <button>Credits Card</button>
                 </a>
             </div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
                 <img src="<?= base_url('assets/front/images') ?>/icon-2.avif">
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
                     <button>Payday</button>
                 </a>
             </div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
                 <img src="<?= base_url('assets/front/images') ?>/icon-3.avif">
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
                     <button>Personal Loans</button>
                 </a>
             </div>
@@ -389,20 +397,20 @@
         <div class="row cards" style="width: 70%; display: flex;margin: 0 auto; margin-top: 30px">
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
                 <img src="<?= base_url('assets/front/images') ?>/icon-4.avif" style="display: block;">
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
                     <button>Student Debt</button>
                 </a>
             </div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
                 <img src="<?= base_url('assets/front/images') ?>/icon-5.avif">
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
 
                     <button>Income Tax</button>
                 </a>
             </div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
                 <img src="<?= base_url('assets/front/images') ?>/icon-6.avif">
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
 
                     <button>Medical Bills</button>
                 </a>
@@ -412,14 +420,14 @@
             <div class="col-md-2"></div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
                 <img src="<?= base_url('assets/front/images') ?>/icon-7.avif" style="display: block;">
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
 
                     <button>Household bills</button>
                 </a>
             </div>
             <div class="col-md-4" style="box-shadow: 1px 1px 6px 3px #e5e5e5;">
                 <img src="<?= base_url('assets/front/images') ?>/icon-8.avif">
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
 
                     <button>Other Unsecured Debt</button>
                 </a>
@@ -435,21 +443,21 @@
         <div class="row" style="justify-content: center;">
             <div class="col-md-4 box-1">
                 <p style="color:#fff;">See if you qualify by taking our FREE debt savings quiz.</p>
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
 
                     <button style="margin-top:171px;"> Start Quiz Now > </button>
                 </a>
             </div>
             <div class="col-md-4 box-2">
                 <p style="color:#fff;">Our debt experts specialize in helping Americans significantly reduce their unaffordable debts into small monthly payments without having to declare bankruptcy.</p>
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
 
                     <button> Reduce Debt Now > </button>
                 </a>
             </div>
             <div class="col-md-4 box-3">
                 <p style="color:#fff;">There's no one size fits all. Some solutions are better for some individuals than others. Our team recommends the best solution available for YOU!</p>
-                <a href="<?= base_url('/#Quiz') ?>">
+                <a style="text-decoration: none;" href="<?= base_url('/#Quiz') ?>">
 
                     <button style="margin-top:125px;"> Become Debt-Free > </button>
                 </a>

@@ -1,5 +1,9 @@
-<div class="row">
-<h1>Terms & Conditions</h1>
+
+<div class="container">
+   <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+         <h1>Terms & Conditions</h1>
                      <?php
                         $pattern = "/<p[^>]*><\\/p[^>]*>/"; 
                         //$pattern = "/<[^\/>]*>([\s]?)*<\/[^>]*>/";  use this pattern to remove any empty tag
@@ -9,10 +13,14 @@
                         $description= preg_replace("{{address}}",$address, $description); 
 
                         $description= preg_replace("{{base_url}}",base_url(), $description); 
+                         
+                         echo $description;
+                        ?>             
 
+      </div>
+      <div class="col-md-2"></div>
 
-                        echo $description;
-                        ?>					
+      </div>
 
-		</div>
-	</div>
+</div>
+
