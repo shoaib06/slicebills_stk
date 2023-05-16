@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1deb3+bionic1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jan 09, 2023 at 10:39 AM
--- Server version: 5.7.38-0ubuntu0.18.04.1
--- PHP Version: 7.4.29
+-- Host: 127.0.0.1
+-- Generation Time: May 16, 2023 at 02:13 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,7 +35,7 @@ CREATE TABLE `tbl_admin` (
   `profile_pic` varchar(255) NOT NULL,
   `status` int(11) NOT NULL,
   `ip_address` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_admin`
@@ -52,15 +52,15 @@ INSERT INTO `tbl_admin` (`id`, `name`, `email`, `password`, `profile_pic`, `stat
 
 CREATE TABLE `tbl_cms` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `heading` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `blog_date` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `timestamp` text COLLATE utf8mb4_unicode_ci,
+  `url` varchar(255) NOT NULL,
+  `heading` varchar(255) DEFAULT NULL,
+  `blog_date` varchar(100) DEFAULT NULL,
+  `image` varchar(256) DEFAULT NULL,
+  `description` text NOT NULL,
+  `timestamp` text DEFAULT NULL,
   `category` int(11) DEFAULT NULL COMMENT '1=>home_top,2=>top_reads,3=>trending',
-  `is_featured` tinyint(4) NOT NULL DEFAULT '1',
-  `status` tinyint(4) NOT NULL DEFAULT '1'
+  `is_featured` tinyint(4) NOT NULL DEFAULT 1,
+  `status` tinyint(4) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -83,10 +83,10 @@ CREATE TABLE `tbl_contact` (
   `id` int(11) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `question_type` text,
-  `massage` text,
+  `question_type` text DEFAULT NULL,
+  `massage` text DEFAULT NULL,
   `timestamp` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tbl_contact`
@@ -110,15 +110,15 @@ CREATE TABLE `tbl_donot_sell_requests` (
   `phone` varchar(20) DEFAULT NULL,
   `first_name` varchar(255) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
-  `address` text,
-  `city` text,
+  `address` text DEFAULT NULL,
+  `city` text DEFAULT NULL,
   `state` varchar(255) DEFAULT NULL,
   `zip` varchar(255) DEFAULT NULL,
   `request_on` varchar(100) DEFAULT NULL,
   `ip_address` varchar(255) DEFAULT NULL,
   `timestamp` bigint(20) DEFAULT NULL,
-  `deleted_at` int(11) DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `deleted_at` int(11) DEFAULT 0
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_donot_sell_requests`
@@ -139,7 +139,7 @@ CREATE TABLE `tbl_faq` (
   `question` longtext NOT NULL,
   `answer` longtext NOT NULL,
   `orders` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -155,29 +155,33 @@ CREATE TABLE `tbl_leads` (
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
-  `zip_code` int(11) DEFAULT NULL,
-  `name` text,
-  `address` longtext,
-  `state` text,
+  `zip_code` varchar(50) DEFAULT NULL,
+  `debt_amount` varchar(255) DEFAULT NULL,
+  `name` text DEFAULT NULL,
+  `address` longtext DEFAULT NULL,
+  `state` text DEFAULT NULL,
   `dob` datetime DEFAULT NULL,
-  `gender` text,
+  `gender` text DEFAULT NULL,
   `date_time` datetime DEFAULT NULL,
-  `message` text,
-  `certUrl` text,
-  `pingUrl` text,
+  `employment_status` text DEFAULT NULL,
+  `contibute_factor` text DEFAULT NULL,
+  `loan_type` text DEFAULT NULL,
+  `have_st_loan` varchar(70) NOT NULL,
+  `st_loan_type` text NOT NULL,
+  `falling_behind_payment` varchar(50) DEFAULT NULL,
+  `property_live_in` varchar(100) DEFAULT NULL,
+  `certUrl` text DEFAULT NULL,
+  `pingUrl` text DEFAULT NULL,
   `ip_address` varchar(255) NOT NULL,
   `timestamp` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_leads`
 --
 
-INSERT INTO `tbl_leads` (`id`, `user_id`, `first_name`, `last_name`, `email`, `phone`, `city`, `zip_code`, `name`, `address`, `state`, `dob`, `gender`, `date_time`, `message`, `certUrl`, `pingUrl`, `ip_address`, `timestamp`) VALUES
-(1, NULL, 'SHOAIB', 'MOHAMMAD', 'kdas@yopmail.com', '08882670078', 'Idaho', NULL, NULL, NULL, NULL, NULL, NULL, '2022-12-12 16:00:00', 'Test', 'https://cert.trustedform.com/f4efd46331d4039785dbac594250a29d9cc4c1e4', 'https://ping.trustedform.com/0.QBSKwE4EyLqMGJlxMhe8ncnMbibM-LEfzyCtugB7Cb3zP60KAtmi20MCAc1OUdMnXeC8_SSU.XBFO2yQM5gv6x4OGYRofwQ.bMjphw9-M2rymQzrx6enBA', '', '1670855057'),
-(2, NULL, 'Sharadindu', 'Guha', 'sharadindu.guha@gmail.com', '9852369856', 'Behala', 780002, 'Sharadindu Guha', 'Kolkata', 'Georgia', '1998-02-02 00:00:00', 'Male', NULL, NULL, 'https://cert.trustedform.com/4935a2c61da7dd9c8b39e2b81a7c511893378596', 'https://ping.trustedform.com/0.IYwbCQ5WBQ-ktDaZ7lanE8YUbOHTUocKAOo83mTxbW2OATs9zXAl8ZUFEnL6lpQG9dXlcS6M.xo7VNNg1QS-ahelT6ZScrA.c3ny4itJk3UB1fYBbfmYnA', '::1', '1671735214'),
-(3, NULL, 'Sam', 'Ahuja', 'sam@yopmail.com', '9897121641', 'Test', 7000245, 'Sam Ahuja', 'Test', 'Idaho', '1991-09-06 00:00:00', 'Male', NULL, NULL, 'https://cert.trustedform.com/5cf4ff9a00ab1743aeaac6a9bbc048d6498c599c', 'https://ping.trustedform.com/0.cZ8v9lfgiDYBOJjHjaFhje14lfgTYzrjCC4lAXeOwNS45l3JLKPUMPZeBZUcbIlA9hwF-gJU.P0p9C1BG-OuNv60PqXaGEg.Ubb2Yi3qefVflW1muE_ZWA', '::1', '1672211634'),
-(4, NULL, 'SHOAIB', 'MOHAMMAD', 'kdas@yopmail.com', '8882670078', 'KOLKATA', 700024, 'SHOAIB MOHAMMAD', 'R-93,Akra Road', 'AZ', '1978-02-15 00:00:00', 'm', NULL, NULL, '', '', '::1', '1672491185');
+INSERT INTO `tbl_leads` (`id`, `user_id`, `first_name`, `last_name`, `email`, `phone`, `city`, `zip_code`, `debt_amount`, `name`, `address`, `state`, `dob`, `gender`, `date_time`, `employment_status`, `contibute_factor`, `loan_type`, `have_st_loan`, `st_loan_type`, `falling_behind_payment`, `property_live_in`, `certUrl`, `pingUrl`, `ip_address`, `timestamp`) VALUES
+(5, NULL, 'Subodh', 'Singh', 'subodh.singh@suretekinfosoft.com', '04545454545', '', '20130', '$0-$10,000', NULL, NULL, NULL, NULL, NULL, NULL, 'Employed', 'Job Loss Or Income Reduction', 'Credit Cards', 'No', 'Private Student Loan', 'No', 'Rent', 'https://cert.trustedform.com/84ed73b15ac102c4f0def3291db878f309d557ee', 'https://ping.trustedform.com/0.hzc4JfkCqlmE4rgIFTVt7nURTRJhBAXJjCJKm-hWhLO19oHUhlCB-FFWx-ESlo7l_J_jtjdj.EXdrdx9BZFnf-ie02Uxbiw.EVVG4ifETSNzCGphbgbvGg', '122.176.102.18', '1674041891');
 
 -- --------------------------------------------------------
 
@@ -190,7 +194,7 @@ CREATE TABLE `tbl_pages` (
   `title` mediumtext NOT NULL,
   `slug` mediumtext NOT NULL,
   `description` longtext NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_pages`
@@ -219,7 +223,7 @@ CREATE TABLE `tbl_review` (
   `description` longtext NOT NULL,
   `image` varchar(255) NOT NULL,
   `timestamp` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -231,7 +235,7 @@ CREATE TABLE `tbl_settings` (
   `id` int(11) NOT NULL,
   `type` varchar(255) NOT NULL,
   `value` longtext NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_settings`
@@ -261,7 +265,7 @@ CREATE TABLE `tbl_settlement` (
   `settlement` varchar(255) NOT NULL,
   `savings` varchar(255) NOT NULL,
   `timestamp` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -273,7 +277,7 @@ CREATE TABLE `tbl_states` (
   `id` int(11) NOT NULL,
   `code` char(5) NOT NULL DEFAULT '',
   `name` varchar(255) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_states`
@@ -352,7 +356,7 @@ CREATE TABLE `tbl_unsubscribe` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `timestamp` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_unsubscribe`
@@ -376,30 +380,30 @@ CREATE TABLE `tbl_users` (
   `gender` varchar(255) DEFAULT NULL,
   `first_name` varchar(255) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
-  `address` text,
-  `apt` text,
+  `address` text DEFAULT NULL,
+  `apt` text DEFAULT NULL,
   `city` varchar(255) DEFAULT NULL,
   `state` varchar(255) DEFAULT NULL,
   `zip` varchar(255) DEFAULT NULL,
   `dob` varchar(255) DEFAULT NULL,
-  `chkterms` int(11) DEFAULT '1',
-  `chktcpa` int(11) DEFAULT '1',
+  `chkterms` int(11) DEFAULT 1,
+  `chktcpa` int(11) DEFAULT 1,
   `password` varchar(255) NOT NULL,
   `profile_pic` varchar(255) NOT NULL,
   `user_type` int(11) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT '1',
-  `created_by` int(11) NOT NULL DEFAULT '1',
+  `status` int(11) NOT NULL DEFAULT 1,
+  `created_by` int(11) NOT NULL DEFAULT 1,
   `ip_address` varchar(255) NOT NULL,
   `timestamp` bigint(20) NOT NULL,
-  `deleted_at` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `deleted_at` int(11) NOT NULL DEFAULT 0
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbl_users`
 --
 
 INSERT INTO `tbl_users` (`id`, `name`, `email`, `phone`, `gender`, `first_name`, `last_name`, `address`, `apt`, `city`, `state`, `zip`, `dob`, `chkterms`, `chktcpa`, `password`, `profile_pic`, `user_type`, `status`, `created_by`, `ip_address`, `timestamp`, `deleted_at`) VALUES
-(1, 'Nexus1', 'admin@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, 'e10adc3949ba59abbe56e057f20f883e', '', 1, 1, 1, '::1', 1670743737, 0),
+(1, 'Nexus1', 'admin@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, '15168fb3c824e6bebd6f9295e8d434c7', '', 1, 1, 1, '122.176.102.18', 1670743737, 0),
 (31, 'NAHID ABBAS', 'nahid@gmail.com', '95559913777', 'Ms', 'NAHID', 'ABBAS', 'B-29-B 1st FLOOR WEST VINOD NAGAR EAST ', '1234', 'VINOD NAGAR', 'Idaho', '79993', '686687400', 1, 1, 'e10adc3949ba59abbe56e057f20f883e', '', 2, 1, 1, '', 1671365546, 0),
 (32, 'SHOAIB MOHAMMAD', 'shoaib.md06@gmail.com', '08882670078', 'Mr', 'SHOAIB', 'MOHAMMAD', 'R-93,Akra Road', 'Metiabruz,Kolkata', 'KOLKATA', 'Illinois', '70002', '684095400', 1, 1, 'e10adc3949ba59abbe56e057f20f883e', '', 2, 1, 1, '', 1671363838, 0);
 
@@ -411,7 +415,7 @@ INSERT INTO `tbl_users` (`id`, `name`, `email`, `phone`, `gender`, `first_name`,
 
 CREATE TABLE `tbl_user_types` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -548,7 +552,7 @@ ALTER TABLE `tbl_faq`
 -- AUTO_INCREMENT for table `tbl_leads`
 --
 ALTER TABLE `tbl_leads`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_pages`
